@@ -1,6 +1,6 @@
 # React Shopping List
 
-The homepage for this project is [here](https://tylerford.io).
+The homepage for this project is [here](http://tylermorrisford.github.io/shopping).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
