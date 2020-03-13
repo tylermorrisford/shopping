@@ -53,6 +53,7 @@ class App extends Component {
 
   render() {
   return (
+    <>
     <div className="center">
       <h1 className={css`
         display: inline-block;
@@ -63,12 +64,18 @@ class App extends Component {
         border: 2px solid pink;
       `}>Shopping L!st</h1>
         <AddForm addItem={this.addItem}/>
+        </div>
         <ListItems 
+        className={css`
+        display: flex;
+        flex-direction: column
+        `}
         listItems={this.state.listItems} 
         deleteItem={this.deleteItem} 
         toggleComplete={this.toggleComplete}
         />
-    </div>
+    
+    </>
   );
 }
 }

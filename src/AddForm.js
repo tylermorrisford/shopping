@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { css } from "emotion";
 
 class AddForm extends Component{
     state={
@@ -25,9 +26,19 @@ class AddForm extends Component{
 
     render(){
         return(
-            <form onSubmit={this.handleSubmit}>
-                <input type="textarea" 
-                placeholder="add an item"
+            <form 
+                className={css`
+                margin: 20px;
+                `}
+                onSubmit={this.handleSubmit}>
+                <input className={css`
+                &:focus {
+                    border: 5px solid hotpink;
+                }
+                `}
+                type="textarea" 
+                placeholder="add an item..."
+                size="30"
                 onChange={this.handleChange}
                 value={this.state.content}
                 ></input>
