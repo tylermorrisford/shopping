@@ -10,7 +10,7 @@ const ListItems = ({ listItems, deleteItem, toggleComplete }) => {
   const shoppingList = completeItems.length ? (
     listItems.map(item => {
       return (
-        <div className={css`
+        <div key={item.id} className={css`
         display: block;
         width: 200px;
         height: 80px;
