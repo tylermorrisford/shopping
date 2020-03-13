@@ -2,6 +2,8 @@
 
 The homepage for this project is [here](http://tylermorrisford.github.io/shopping).
 
+A simple shopping list application using React and Emotion. Learn more about Emotion [here](https://emotion.sh/docs/introduction).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
