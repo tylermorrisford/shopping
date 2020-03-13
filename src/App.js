@@ -7,10 +7,10 @@ import {css} from 'emotion';
 class App extends Component {
   state={
     listItems:[
-      {id: nextId(), name: 'milk', complete: false},
-      {id: nextId(), name: 'bread', complete: false},
-      {id: nextId(), name: 'eggs', complete: false},
-      {id: nextId(), name: 'bacon', complete: false}
+      {id: nextId(), name: 'Milk', complete: false},
+      {id: nextId(), name: 'Bread', complete: false},
+      {id: nextId(), name: 'Eggs', complete: false},
+      {id: nextId(), name: 'Bacon', complete: false}
     ]
   }
 
@@ -34,6 +34,23 @@ class App extends Component {
     })
   }
 
+  toggleComplete = (id) => {
+    console.log(id);
+    this.setState({
+      listItems: this.state.listItems.map(item => {
+        if (item.id === id) {
+          return {
+            ...item,
+            complete: !item.complete
+          }
+        } else {
+          return item;
+        }
+      } )
+    })
+
+  }
+
   render() {
   return (
     <div className="center">
@@ -49,7 +66,7 @@ class App extends Component {
         <ListItems 
         listItems={this.state.listItems} 
         deleteItem={this.deleteItem} 
-        // toggleComplete={this.toggleComplete}
+        toggleComplete={this.toggleComplete}
         />
     </div>
   );

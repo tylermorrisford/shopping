@@ -1,15 +1,36 @@
 import React from 'react';
 import {css} from 'emotion';
+import 'font-awesome/css/font-awesome.min.css';
 
 
-const ListItems = ({listItems, deleteItem}) => {
+const ListItems = ({listItems, deleteItem, toggleComplete}) => {
 
-    const shoppingList = listItems.length ? (
+    const completeItems = listItems.filter(item => {
+            return !item.complete
+    })
+
+    const shoppingList = completeItems.length ? (
         listItems.map(item => {
             return(
             <>
-            <div className="item" key={item.id}><h4>{item.name}</h4><span onClick={() => {deleteItem(item.id)}}> delete </span>
+            <div onClick={() => {toggleComplete(item.id)}}
+            className={css`
+                display: inline-block;
+                text-decoration: none;
+                padding: 15px;
+            `} 
+            style={{
+                opacity: item.complete ? "0.3" : "1",
+                fontWeight: !item.complete ? "bold" : ""
+            }}
+            key={item.id}>
+                <span>{item.complete ? (<i class="fas fa-2x fa-check-circle"></i>) : (<i class="far fa-2x fa-circle"></i>)}</span>
+                <h4 className={css`
+                display: inline;
+                padding: 10px;
+                `}>{item.name}</h4>
             </div>
+                <span onClick={() => {deleteItem(item.id)}}> X </span><br />
             </>
             )
         })
@@ -22,10 +43,10 @@ const ListItems = ({listItems, deleteItem}) => {
 
     return (
         <div>   
-            {listItems.length ? (<><span className={css`
+            {completeItems.length ? (<><span className={css`
                 color: hotpink;
                 font-size: 0.9em;
-            `}>only {listItems.length} items left to grab</span><br /></>) : ""}
+            `}>only {completeItems.length} items left to grab</span><br /></>) : ""}
             {shoppingList}
         </div>
     )
