@@ -6,9 +6,13 @@ A simple shopping list application using React and Emotion. Learn more about Emo
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## To Install
 
-In the project directory, you can run:
+Clone this repo, then `cd` into that directory. Then you'll need to install the app's dependencies, by running:
+
+### `npm install`
+
+To start the app, you can run:
 
 ### `npm start`
 
