@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import nextId from "react-id-generator";
 import ListItems from './ListItems';
 import AddForm from './AddForm';
+import {css} from 'emotion';
 
 class App extends Component {
   state={
@@ -36,9 +37,20 @@ class App extends Component {
   render() {
   return (
     <div className="center">
-      <h1>shopping l!st</h1>
+      <h1 className={css`
+        display: inline-block;
+        padding: 20px;
+        color: white;
+        border-radius: 20px;
+        background-color: hotpink;
+        border: 2px solid pink;
+      `}>Shopping L!st</h1>
         <AddForm addItem={this.addItem}/>
-        <ListItems listItems={this.state.listItems} deleteItem={this.deleteItem}/>
+        <ListItems 
+        listItems={this.state.listItems} 
+        deleteItem={this.deleteItem} 
+        // toggleComplete={this.toggleComplete}
+        />
     </div>
   );
 }

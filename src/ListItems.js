@@ -1,4 +1,5 @@
 import React from 'react';
+import {css} from 'emotion';
 
 
 const ListItems = ({listItems, deleteItem}) => {
@@ -12,12 +13,19 @@ const ListItems = ({listItems, deleteItem}) => {
             </>
             )
         })
-    ) : (<><h4>Nice work! You got everything!</h4>
-        <p>wait... you forgot toilet paper.</p></>)
+    ) : (<><h4 className={css`
+            color: hotpink;
+        `}>Nice work! You got everything!</h4>
+        <p>wait... you forgot <span className={css`
+            color: hotpink;
+        `}>toilet paper.</span></p></>)
 
     return (
         <div>   
-            {listItems.length ? (<><span>only {listItems.length} items left to grab</span><br /></>) : ""}
+            {listItems.length ? (<><span className={css`
+                color: hotpink;
+                font-size: 0.9em;
+            `}>only {listItems.length} items left to grab</span><br /></>) : ""}
             {shoppingList}
         </div>
     )

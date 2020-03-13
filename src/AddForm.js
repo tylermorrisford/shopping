@@ -13,10 +13,14 @@ class AddForm extends Component{
 
     handleSubmit = (e) => {
         e.preventDefault();
+        if (this.state.content === "") {
+            alert('The store is all out of empty strings :/')
+        } else {
         this.props.addItem(this.state);
         this.setState({
             content: ""
         })
+    }
     }
 
     render(){
