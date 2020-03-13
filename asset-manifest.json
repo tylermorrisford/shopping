@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/shopping/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/shopping/static/js/main.a94cd3ac.chunk.js",
+    "main.js.map": "/shopping/static/js/main.a94cd3ac.chunk.js.map",
+    "runtime-main.js": "/shopping/static/js/runtime-main.24be07d1.js",
+    "runtime-main.js.map": "/shopping/static/js/runtime-main.24be07d1.js.map",
+    "static/css/2.117ef58c.chunk.css": "/shopping/static/css/2.117ef58c.chunk.css",
+    "static/js/2.ec7de77e.chunk.js": "/shopping/static/js/2.ec7de77e.chunk.js",
+    "static/js/2.ec7de77e.chunk.js.map": "/shopping/static/js/2.ec7de77e.chunk.js.map",
+    "index.html": "/shopping/index.html",
+    "precache-manifest.f44ed574ddc970580c175b242306c910.js": "/shopping/precache-manifest.f44ed574ddc970580c175b242306c910.js",
+    "service-worker.js": "/shopping/service-worker.js",
+    "static/css/2.117ef58c.chunk.css.map": "/shopping/static/css/2.117ef58c.chunk.css.map",
+    "static/css/main.5ecd60fb.chunk.css.map": "/shopping/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.ec7de77e.chunk.js.LICENSE.txt": "/shopping/static/js/2.ec7de77e.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.min.css": "/shopping/static/media/fontawesome-webfont.fee66e71.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.24be07d1.js",
+    "static/css/2.117ef58c.chunk.css",
+    "static/js/2.ec7de77e.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.a94cd3ac.chunk.js"
+  ]
+}
