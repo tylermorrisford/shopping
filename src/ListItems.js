@@ -109,7 +109,6 @@ const ListItems = ({ listItems, deleteItem, toggleComplete }) => {
       <div
         className={css`
           display: flex;
-          height: 500px;
           flex-direction: column;
           flex-wrap:wrap;
           border: 2px solid pink;
@@ -117,16 +116,16 @@ const ListItems = ({ listItems, deleteItem, toggleComplete }) => {
           height: 700px;
           @media (min-width: 420px) and (max-width: 768px) {
             width: 400px;
-            margin: 0 auto;
+            margin: 10px auto;
             height: auto;
           }
           @media (min-width: 769px) and (max-width: 1023px) {
             width: 740px;
-            margin: 0 auto;
+            margin: 10px auto;
           }
           @media (min-width: 1024px) {
             width: 960px;
-            margin: 0 auto;
+            margin: 20px auto;
           }
         `}
       >
