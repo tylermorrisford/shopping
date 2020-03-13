@@ -10,7 +10,11 @@ const ListItems = ({ listItems, deleteItem, toggleComplete }) => {
   const shoppingList = completeItems.length ? (
     listItems.map(item => {
       return (
-        <>
+        <div className={css`
+        display: block;
+        width: 200px;
+        height: 80px;
+        `}>
           <div
             onClick={() => {
               toggleComplete(item.id);
@@ -28,9 +32,9 @@ const ListItems = ({ listItems, deleteItem, toggleComplete }) => {
           >
             <span>
               {item.complete ? (
-                <i class="fas fa-2x fa-check-circle"></i>
+                <i className="fas fa-2x fa-check-circle"></i>
               ) : (
-                <i class="far fa-2x fa-circle"></i>
+                <i className="far fa-2x fa-circle"></i>
               )}
             </span>
             <h4
@@ -51,12 +55,14 @@ const ListItems = ({ listItems, deleteItem, toggleComplete }) => {
             X{" "}
           </span>
           <br />
-        </>
+        </div>
       );
     })
   ) : (
     <div className={css`
-        align-content: center;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
     `}>
       <h4
         className={css`
@@ -102,19 +108,24 @@ const ListItems = ({ listItems, deleteItem, toggleComplete }) => {
       )}</div>
       <div
         className={css`
-          display: flexbox;
-          align-items: flex-start;
+          display: flex;
+          height: 500px;
           flex-direction: column;
-          flex-wrap: wrap;
+          flex-wrap:wrap;
           border: 2px solid pink;
           border-radius: 20px;
-          height: 500px;
-          @media (min-width: 420px) {
+          height: 700px;
+          @media (min-width: 420px) and (max-width: 768px) {
             width: 400px;
+            margin: 0 auto;
+            height: auto;
+          }
+          @media (min-width: 769px) and (max-width: 1023px) {
+            width: 740px;
             margin: 0 auto;
           }
           @media (min-width: 1024px) {
-            width: 900px;
+            width: 960px;
             margin: 0 auto;
           }
         `}
