@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import nextId from "react-id-generator";
 import ListItems from './ListItems';
+import AddForm from './AddForm';
 
 class App extends Component {
   state={
@@ -10,6 +11,16 @@ class App extends Component {
       {id: nextId(), name: 'eggs', complete: false},
       {id: nextId(), name: 'bacon', complete: false}
     ]
+  }
+
+  addItem = (item) => {
+    item.id = nextId();
+    item.name = item.content;
+    item.complete = false;
+    let listItems = [...this.state.listItems, item];
+    this.setState({
+      listItems
+    })
   }
 
   deleteItem = (id) => {
@@ -26,6 +37,7 @@ class App extends Component {
   return (
     <div className="center">
       <h1>shopping l!st</h1>
+        <AddForm addItem={this.addItem}/>
         <ListItems listItems={this.state.listItems} deleteItem={this.deleteItem}/>
     </div>
   );

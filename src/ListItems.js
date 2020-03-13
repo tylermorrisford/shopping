@@ -7,15 +7,17 @@ const ListItems = ({listItems, deleteItem}) => {
         listItems.map(item => {
             return(
             <>
-            <div className="item" key={item.id}><h5>{item.name}</h5><span onClick={() => {deleteItem(item.id)}}> delete </span>
+            <div className="item" key={item.id}><h4>{item.name}</h4><span onClick={() => {deleteItem(item.id)}}> delete </span>
             </div>
             </>
             )
         })
-    ) : (<p>"nice work!"</p>)
+    ) : (<><h4>Nice work! You got everything!</h4>
+        <p>wait... you forgot toilet paper.</p></>)
 
     return (
         <div>   
+            {listItems.length ? (<><span>only {listItems.length} items left to grab</span><br /></>) : ""}
             {shoppingList}
         </div>
     )
