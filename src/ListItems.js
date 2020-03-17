@@ -28,8 +28,7 @@ const ListItems = ({ listItems, deleteItem, toggleComplete }) => {
               padding: 15px;
             `}
             style={{
-              opacity: item.complete ? "0.3" : "1",
-              fontWeight: !item.complete ? "bold" : ""
+              opacity: item.complete ? "0.3" : "1"
             }}
             key={item.id}
           >
