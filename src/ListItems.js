@@ -14,6 +14,9 @@ const ListItems = ({ listItems, deleteItem, toggleComplete }) => {
         display: block;
         width: 200px;
         height: 80px;
+        @media (min-width: 420px) and (max-width: 768px) {
+          width: 350px;
+        }
         `}>
           <div
             onClick={() => {
